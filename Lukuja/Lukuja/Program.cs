@@ -10,8 +10,9 @@ namespace Lukuja
     {
         static void Main(string[] args)
         {
-            List<float> numbers = new List<float>();
             bool quit = false;
+            float avg = 0.0f;
+            bool first = true;
 
             while (!quit)
             {
@@ -24,17 +25,15 @@ namespace Lukuja
                     quit = true;
                 else
                 {
-                    numbers.Add(input);
+                    avg += input;
+
+                    if (!first)
+                        avg /= 2.0f;
+                    else
+                        first = false;
                 }
             }
 
-            float total = 0.0f;
-            for (int i = 0; i < numbers.Count; i++)
-            {
-                total += numbers[i];
-            }
-
-            float avg = total / numbers.Count;
             avg = (float)Math.Round(avg, 2);
 
             Console.WriteLine(avg);
