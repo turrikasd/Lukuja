@@ -16,8 +16,7 @@ namespace Lukuja
             for (int i = 0; !quit; i++)
             {
                 float input = 0.0f;
-                string s = Console.ReadLine();
-                s = s.Replace('.', ','); // Parse expects , instead of .
+                string s = Console.ReadLine().Replace('.', ','); // Parse expects , instead of .
                 input = float.Parse(s);
 
                 if (input < 0.0f)
