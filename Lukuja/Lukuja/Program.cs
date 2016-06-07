@@ -35,6 +35,7 @@ namespace Lukuja
             }
 
             float avg = total / numbers.Count;
+            avg = (float)Math.Round(avg, 2);
 
             Console.WriteLine(avg);
             Console.ReadKey();
