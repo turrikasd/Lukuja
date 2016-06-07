@@ -12,9 +12,8 @@ namespace Lukuja
         {
             bool quit = false;
             float avg = 0.0f;
-            bool first = true;
 
-            while (!quit)
+            for (int i = 0; !quit; i++)
             {
                 float input = 0.0f;
                 string s = Console.ReadLine();
@@ -27,10 +26,8 @@ namespace Lukuja
                 {
                     avg += input;
 
-                    if (!first)
+                    if (i != 0)
                         avg /= 2.0f;
-                    else
-                        first = false;
                 }
             }
 
